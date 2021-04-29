@@ -87,9 +87,8 @@ int main() {
         Month currentMonthStruct = monthVector[i];
         std::vector<std::vector<std::string>> currentMonth(currentMonthStruct.daysCount);
     
-        if(i > 0) {
+
         currentMonth = next(savedPreviousMonth, currentMonth);
-        }
 
         while(q > 0){
             std::cin >> OperationType;
@@ -109,7 +108,7 @@ int main() {
             q--;
         }
 
-        if(i == 11) i = 0;
+        if(i == 11) i = -1;
 
         }
 
